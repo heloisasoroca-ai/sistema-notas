@@ -1,5 +1,5 @@
 ====RELATÓRIO====
-Helo- Média: 6-Aprovado
-Yoh- Média: 7-Aprovado
+helo- Média: 8.5-Reprovado
+yoh- Média: 8.5-Reprovado
 
-Resumo: 1 aprovados, 1 em recuperação, 0 reprovados.
+Resumo: 2 aprovados, 0 em recuperação, 0 reprovados.

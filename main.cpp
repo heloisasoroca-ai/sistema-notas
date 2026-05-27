@@ -14,12 +14,37 @@ int main(){
     float notas[20][5];
     float media[20];
     int qtdDisciplinas;
+    int opcaoInicial;
 
     //Processamento 
 
     //Leitura de alunos (commit 1)
     cout << "=== SISTEMA DE NOTAS v4.0 ===" << endl;
-    do {
+    cout << "1 - Novo Relatório" << endl;
+    cout << "2 - Ver relatório salvo" << endl;
+    cout << "Escolha um opção: " << endl;
+    cin >> opcaoInicial;
+
+    //Leitura de arquivo (commit 5)
+    if (opcaoInicial == 2) 
+    {
+        ifstream leitura("relatorio.txt");
+        if(leitura.is_open()){
+            string linha;
+            cout << "\n";
+            while(getline(leitura, linha)){
+                cout << linha << endl;
+            }
+            leitura.close();
+        } else {
+            cout << "Nenhum relatório encontrado." << endl;
+        }
+        return 0;
+    }
+
+
+    do 
+    {
         cout << "Quantidade de Alunos (1 a 20): ";
         cin >> qtdAlunos;
     } while (qtdAlunos < 1 || qtdAlunos > 20);
@@ -64,7 +89,7 @@ int main(){
 
     for (int i = 0; i < qtdAlunos; i++) 
     {
-        cout << nomes[i] << "- Média: " << media[i] << " - ";
+        cout << nomes[i] << "- Média: " << media[i] << "  -  " << endl;
         if (media[i] >= 7)
         {
             cout << "Aprovado" << endl;
@@ -72,7 +97,7 @@ int main(){
 
         } 
 
-        else if ( media[i] >= 5)
+        else if ( media[i] <= 5)
         {
             cout << "Recuperação" << endl;
             recuperacao++;
@@ -97,7 +122,7 @@ if (arquivo.is_open())
     for (int i = 0; i < qtdAlunos; i++)
     {
         arquivo << nomes[i] << "- Média: " << media[i] << "-";
-        if (media[i] <= 7) {
+        if (media[i] >= 7) {
 
             arquivo << "Aprovado" << endl;
         } else if (media[i] <= 5) {
