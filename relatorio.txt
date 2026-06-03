@@ -1,5 +1,6 @@
-====RELATÓRIO====
-helo- Média: 8.5-Reprovado
-yoh- Média: 8.5-Reprovado
+Data do relatorio: Wed Jun 03 08:52:13 2026
 
-Resumo: 2 aprovados, 0 em recuperação, 0 reprovados.
+====RELATÓRIO====
+helo- Média: 7.5-Aprovado
+
+Resumo: 1 aprovados, 0 em recuperação, 0 reprovados.

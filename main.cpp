@@ -60,10 +60,18 @@ int main(){
     
     cin.ignore();
 
-    for (int i = 0; i < qtdAlunos; i++){
-        cout << "Nome do aluno: " << i + 1 << ": ";
+   for (int i = 0; i < qtdAlunos; i++) {
+   
+    do {
+        cout << "Nome do aluno " << i + 1 << ": ";
         getline(cin, nomes[i]);
-    }
+
+       
+        if (nomes[i] == "") {
+            cout << "O nome nao pode ficar em branco! Tente novamente.\n";
+        }
+
+    } while (nomes[i] == "");
 
     //Notas e médias (commit 2)
     do {
@@ -154,7 +162,6 @@ arquivo << "Data do relatorio: " << dataHora << endl;
 } else {
     cout << "Erro ao criar arquivo." << endl;
 }
-
-
+} 
     return 0;
 }
