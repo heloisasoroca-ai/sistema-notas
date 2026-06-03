@@ -16,6 +16,8 @@ int main(){
     float media[20];
     int qtdDisciplinas;
     int opcaoInicial;
+    int notaMaior = 0;
+    int notaMenor = 0;
 
     //Processamento 
 
@@ -24,6 +26,7 @@ int main(){
     cout << "1 - Novo Relatório" << endl;
     cout << "2 - Ver relatório salvo" << endl;
     cout << "3 - Sobre o sistema" << endl;
+    cout << "4 - Relatório de reprovados" << endl;
     cout << "Escolha um opção: " << endl;
     cin >> opcaoInicial;
 
@@ -51,6 +54,23 @@ int main(){
         cout << "Turma: LOPAL 2026 - SENAI-SP" << endl;
     }
 
+    if (opcaoInicial == 4) 
+    {
+        ifstream leitura("reprovados.txt");
+        
+        if (leitura.is_open()) {
+            string reprovados;
+            cout << "\n";
+            while (getline(leitura, reprovados)) {
+                cout << reprovados << endl;
+            }
+            leitura.close();
+        } else {
+            cout << "Nenhum relatório de reprovados encontrado." << endl;
+        }
+        
+        return 0; 
+    }
 
     do 
     {
@@ -72,7 +92,7 @@ int main(){
         }
 
     } while (nomes[i] == "");
-
+   }
     //Notas e médias (commit 2)
     do {
         cout << "\nQuantidade de disciplinas (1 a 5): " << endl;
@@ -114,7 +134,7 @@ int main(){
 
         } 
 
-        else if ( media[i] <= 5)
+        else if ( media[i] >= 5)
         {
             cout << "Recuperação" << endl;
             recuperacao++;
@@ -147,7 +167,7 @@ arquivo << "Data do relatorio: " << dataHora << endl;
         if (media[i] >= 7) {
 
             arquivo << "Aprovado" << endl;
-        } else if (media[i] <= 5) {
+        } else if (media[i] >= 5) {
 
             arquivo << "Recuperação" << endl;
         } else {
@@ -156,12 +176,29 @@ arquivo << "Data do relatorio: " << dataHora << endl;
         }
     } 
     arquivo << "\nResumo: " << aprovados << " aprovados, " << recuperacao << " em recuperação, " << reprovados << " reprovados." << endl;
+
     
+for (int i = 1; i < qtdAlunos; i++) {
+   
+    if (media[i] > media[notaMaior])
+    {
+        notaMaior = i; 
+    } 
+    if (media[i] < media[notaMenor]) 
+    {
+        notaMenor = i;
+    }
+
+cout << "Maior media: " << nomes[notaMaior] << " (" << media[notaMaior] << ")" << endl;
+cout << "Menor media: " << nomes[notaMenor] << " (" << media[notaMenor] << ")" << endl;
+}
+
     arquivo.close();
     cout << "\nRelatório salvo com sucesso " << endl;
 } else {
     cout << "Erro ao criar arquivo." << endl;
 }
-} 
+    
+
     return 0;
 }

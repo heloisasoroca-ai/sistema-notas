@@ -1,6 +1,7 @@
-Data do relatorio: Wed Jun 03 08:52:13 2026
+Data do relatorio: Wed Jun 03 10:07:34 2026
 
 ====RELATÓRIO====
-helo- Média: 7.5-Aprovado
+helo- Média: 2-Reprovado
+yoh- Média: 0.5-Reprovado
 
-Resumo: 1 aprovados, 0 em recuperação, 0 reprovados.
+Resumo: 0 aprovados, 0 em recuperação, 2 reprovados.
