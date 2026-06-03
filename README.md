@@ -2,18 +2,13 @@
 
 Este é um programa em **C++** desenvolvido para o gerenciamento de notas escolares de alunos. Ele permite a criação de um novo relatório de desempenho (com cálculo de médias e classificação de status do aluno) ou a leitura de um relatório gerado anteriormente e salvo em um arquivo de texto.
 
-## 🚀 Funcionalidades
-
-- **Menu Inicial:** Escolha entre iniciar um novo relatório ou abrir um relatório salvo anteriormente.
-- **Cadastro de Alunos:** Suporta o cadastro de 1 a 20 alunos.
-- **Cadastro de Disciplinas e Notas:** Suporta a inserção de notas (0 a 10) para 1 a 5 disciplinas por aluno.
-- **Cálculo Automático:** Calcula a média de cada aluno de acordo com o número de disciplinas inseridas.
-- **Classificação de Status:**
-  - 🟢 **Aprovado:** Média igual ou superior a 7.0.
-  - 🟡 **Recuperação:** Média menor ou igual a 5.0.
-  - 🔴 **Reprovado:** Médias intermediárias (entre 5.1 e 6.9).
-- **Persistência de Dados:** Salva automaticamente o relatório final e um resumo estatístico em um arquivo chamado `relatorio.txt`.
-- **Compatibilidade de Caracteres:** Configurado para exibir caracteres especiais e acentuação corretamente no terminal Windows (UTF-8).
+## Funcionalidades
+- Cadastro de alunos e notas por disciplina
+- Cálculo de médias por aluno
+- Classificação: Aprovado, Recuperação ou Reprovado
+- Relatório salvo em arquivo .txt com data e hora
+- Leitura de relatório salvo
+- Menu "Sobre o sistema".
 
 ## 📁 Estrutura de Commits (Histórico de Desenvolvimento)
 
