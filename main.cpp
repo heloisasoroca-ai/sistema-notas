@@ -19,9 +19,10 @@ int main(){
     //Processamento 
 
     //Leitura de alunos (commit 1)
-    cout << "=== SISTEMA DE NOTAS v4.0 ===" << endl;
+    cout << "=== SISTEMA DE NOTAS v4.1 ===" << endl;
     cout << "1 - Novo Relatório" << endl;
     cout << "2 - Ver relatório salvo" << endl;
+    cout << "3 - Sobre o sistema" << endl;
     cout << "Escolha um opção: " << endl;
     cin >> opcaoInicial;
 
@@ -40,6 +41,12 @@ int main(){
             cout << "Nenhum relatório encontrado." << endl;
         }
         return 0;
+    }
+    if (opcaoInicial == 3) {
+        cout << "==== Sobre ====" << endl;
+        cout << "Sistema de Notas v4.1" << endl;
+        cout << "Desenvolvido por: Heloisa Gigliott" << endl;
+        cout << "Turma: LOPAL 2026 - SENAI-SP" << endl;
     }
 
 
